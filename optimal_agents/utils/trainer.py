@@ -119,8 +119,8 @@ def train_rl(params, model=None, env=None, morphology=None, path=None, verbose=1
     return model, data_dir
 
 def train_ea(params, path=None):
-    if path is None:
-        path = get_paths(params, path=path, evo=True)[0] # throw away the tensorboard path.
+    # if path is None:
+    path = get_paths(params, path=path, evo=True)[0] # throw away the tensorboard path.
     evo_alg = vars(optimal_agents.algs)[params['evo_alg']]
     evo_model = evo_alg(params, **params['evo_alg_kwargs'])
     evo_model.learn(path, **params['evo_learn_kwargs'])
