@@ -1,6 +1,10 @@
 import os
 import optimal_agents
 import yaml
+try:
+    from yaml import CLoader as Loader, CDumper as Dumper
+except ImportError:
+    from yaml import Loader, Dumper
 import pprint
 from datetime import date
 import stable_baselines3
@@ -66,7 +70,7 @@ class Parameters(object):
         if not '.' in path:
             path = os.path.join(path, "params.yaml")
         with open(path, 'r') as f:
-            data = yaml.load(f)
+            data = yaml.load(f, Loader=Loader)
         config = cls()
         config.update(data)
         return config
