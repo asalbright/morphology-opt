@@ -107,12 +107,12 @@ class GapsCorridor(EmptyCorridor):
 
         # Make the first platform larger.
         platform_length = 3 * _CORRIDOR_X_PADDING
-        platform_pos = [platform_length / 2, 0, -_WALL_THICKNESS]
+        platform_pos = [platform_length / 2 - 1, 0, -_WALL_THICKNESS]
         platform_size = [platform_length / 2, self._corridor_width / 2, _WALL_THICKNESS]
 
         self._ground_body.add('geom', type='box', rgba=variation.evaluate(self._ground_rgba, random_state), name='start_floor', pos=platform_pos, size=platform_size)
 
-        current_x = platform_length
+        current_x = platform_length - 1
         platform_id = 0
         while current_x < self._corridor_length:
             platform_length = variation.evaluate(self._platform_length, random_state=random_state)
