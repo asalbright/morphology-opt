@@ -9,6 +9,7 @@ arenas_2d = ['EmptyCorridor', 'GapsCorridor', 'HurdlesCorridor', 'GM_Terrain']
 arenas_3d = ['EmptyCorridor', 'GapsCorridor', 'WallsCorridor', 'HurdlesCorridor', 'GM_Terrain3D']
 
 for j, path in enumerate(params_path):
+    config['setup_command'] = 'bash setup.sh'
     config['command'] = 'python scripts/train_rl.py'
     config["is_parent"] = False
 

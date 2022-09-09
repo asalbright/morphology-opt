@@ -6,7 +6,7 @@ env_kwargs:
   time_limit: 3.5
 wrapper: LineGraphWrapper
 
-arena: GM_Terrain
+arena: null
 
 morphology: random2d # can be predefined, like "cheetah" or path to the morphology.
 mutation_kwargs:

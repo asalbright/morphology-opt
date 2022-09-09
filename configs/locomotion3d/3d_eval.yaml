@@ -6,12 +6,13 @@
 name: null # Add name of the run here.
 
 env: XVel  # one of XVel NegXVel YVel NegYVel
+arena: null
 
 wrapper: DictObsWrapper
 wrapper_kwargs:
   keys: ["x", "edge_attr"]
 
-morphology: random3d # can be predefined or a path
+morphology: data/LocomotionUnsupervised_LineGraphWrapper_TAME_11/best_morphology.pkl # can be predefined or a path
 mutation_kwargs:
   min_nodes: 3
   max_nodes: 10
@@ -39,4 +40,4 @@ policy_kwargs:
   net_arch: [256, 256]
 
 learn_kwargs:
-  total_timesteps: 500000
+  total_timesteps: 1000000

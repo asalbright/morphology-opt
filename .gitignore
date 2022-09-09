@@ -1,3 +1,6 @@
+# Ignore mac outputs
+.DS_Store
+
 # Ignore specific output directories
 .vscode/
 data/

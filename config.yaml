@@ -1,0 +1,19 @@
+
+name: 'Morphology Optimization'
+description: 'Running code for morphology optimization.'
+tags: ['Morphology Optimization']
+priority: 1
+# setup_command: 'bash setup.sh'
+command: 'python run.py'
+project_id:
+resources:
+ cluster: ["KUBE_ALL"]
+ timeout: 5d
+ docker_image: docker.apple.com/wtalbott/scratch/dm_control
+ num_cpus: 40
+ num_gpus: 1
+ disk_gb: 1075
+ memory_gb: 200
+is_parent: True
+environment_variables:
+  PYTHON_VERSION: 3.8

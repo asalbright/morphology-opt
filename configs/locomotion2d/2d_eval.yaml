@@ -6,12 +6,13 @@
 name: null # Add name of the run here.
 
 env: XVel  # one of XVel, NegXVel, ZVel
+arena: null
 
 wrapper: DictObsWrapper
 wrapper_kwargs:
   keys: ["x", "edge_attr"]
 
-morphology: cheetah # can be predefined or a path
+morphology: data/LocomotionUnsupervised_LineGraphWrapper_TAME_00/best_morphology.pkl # cheetah # can be predefined or a path
 mutation_kwargs: # mutation args are used in morphology sampling if set to random.
   min_nodes: 3
   max_nodes: 10
